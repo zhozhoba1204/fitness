@@ -5,6 +5,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import javax.persistence.*;
+import java.util.List;
 
 @Data
 @Entity
@@ -29,4 +30,8 @@ public class UserEntity {
 
     @Column(name = "age", nullable = false)
     private Integer age;
+
+    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true, mappedBy = "userEntity")
+    private List<Membership> memberships;
+
 }
