@@ -19,6 +19,7 @@
         <junit.jupiter.version>5.8.2</junit.jupiter.version>
         <mapstruct.version>1.4.2.Final</mapstruct.version>
         <postgresql.version>42.3.3</postgresql.version>
+        <javax.validation>2.0.0.Final</javax.validation>
     </properties>
     <dependencies>
         <dependency>
@@ -75,6 +76,11 @@
             <groupId>com.h2database</groupId>
             <artifactId>h2</artifactId>
             <scope>runtime</scope>
+        </dependency>
+        <dependency>
+            <groupId>javax.validation</groupId>
+            <artifactId>validation-api</artifactId>
+            <version>${javax.validation}</version>
         </dependency>
     </dependencies>
 

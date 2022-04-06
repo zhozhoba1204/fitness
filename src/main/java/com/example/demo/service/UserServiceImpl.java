@@ -20,8 +20,8 @@ public class UserServiceImpl implements UserService {
     private final UserEntityToUserDtoMapper userEntityToUserDtoMapper;
 
     @Override
-    public UserDto addNewUser(UserDto user) {
-        UserEntity userEntity = userDtoToUserEntityMapper.mapTo(user);
+    public UserDto addNewUser(UserDto userDto) {
+        UserEntity userEntity = userDtoToUserEntityMapper.mapTo(userDto);
         UserEntity save = userDao.save(userEntity);
         return userEntityToUserDtoMapper.mapTo(save);
     }
