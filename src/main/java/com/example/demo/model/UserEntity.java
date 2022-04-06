@@ -32,6 +32,6 @@ public class UserEntity {
     private Integer age;
 
     @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true, mappedBy = "userEntity")
-    private List<Membership> memberships;
+    private List<MembershipEntity> membershipEntities;
 
 }

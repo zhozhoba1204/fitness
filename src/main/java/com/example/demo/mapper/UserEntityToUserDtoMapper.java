@@ -8,8 +8,8 @@ import org.mapstruct.Mapping;
 @Mapper(componentModel = "spring")
 public abstract class UserEntityToUserDtoMapper {
 
-    @Mapping(target = "firstName",source = "firstName")
-    @Mapping(target = "lastName",source = "lastName")
-    @Mapping(target = "age",source = "age")
+    @Mapping(target = "firstName", source = "firstName")
+    @Mapping(target = "lastName", source = "lastName")
+    @Mapping(target = "age", source = "age")
     public abstract UserDto mapTo(UserEntity userEntity);
 }

@@ -13,7 +13,7 @@ import java.time.LocalDate;
 @NoArgsConstructor
 @AllArgsConstructor
 @Table(name = "membership")
-public class Membership {
+public class MembershipEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -30,4 +30,9 @@ public class Membership {
     @JoinColumn(name = "user_id")
     private UserEntity userEntity;
 
+    public MembershipEntity(LocalDate endDate, String section, UserEntity userEntity) {
+        this.endDate = endDate;
+        this.section = section;
+        this.userEntity = userEntity;
+    }
 }
