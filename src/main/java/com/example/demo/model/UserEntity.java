@@ -31,6 +31,9 @@ public class UserEntity {
     @Column(name = "age", nullable = false)
     private Integer age;
 
+    @Column(name = "passport", nullable = false)
+    private Integer passport;
+
     @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true, mappedBy = "userEntity")
     private List<MembershipEntity> membershipEntities;
 
